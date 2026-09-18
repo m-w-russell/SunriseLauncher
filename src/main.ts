@@ -1059,11 +1059,12 @@ async function closeLauncher() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  element(".launcher-shell").addEventListener("mousedown", (event) => {
+  document.body.addEventListener("mousedown", (event) => {
     if (!appWindow || event.button !== 0 || event.buttons !== 1) return;
     const target = event.target;
     if (!(target instanceof Element)) return;
-    if (target.closest("button, input, textarea, select, option, a, label, summary, [contenteditable='true']")) return;
+    if (target.closest(".dialog, .window-controls")) return;
+    if (target.closest("button, input, textarea, select, option, a, label, summary, [contenteditable='true']") && !target.closest(".overlay-backdrop")) return;
     void appWindow.startDragging().catch((error) => console.error("Could not start dragging the launcher window", error));
   });
   element("#settings-action").addEventListener("click", openSettings);
