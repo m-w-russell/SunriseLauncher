@@ -2234,7 +2234,7 @@ svg {
 ::-webkit-scrollbar-thumb {
   background: var(--gold);
   border-radius: 5px;
-  border: 2px solid var(--);
+  border: 2px solid var(--dialog-bg);
 }
 
 /* Scrollbar Handle hover */
