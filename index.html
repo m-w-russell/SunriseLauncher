@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/src/styles.css" />
     <title>Project Sunrise Launcher</title>
     <script type="module" src="/src/main.ts" defer></script>
-    <script src="/src/components.ts"></script>
   </head>
   <body>
     <div class="background" aria-hidden="true">
@@ -77,7 +76,7 @@
       <div class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title">
         <header class="dialog-header">
           <div><span>Project Sunrise</span><h2 id="settings-title" tabindex="-1">Settings</h2></div>
-          <ui-close-button id="close-settings" aria-label="Close Settings"/>
+          <ui-close-button id="close-settings" aria-label="Close Settings"></ui-close-button>
         </header>
 
         <div class="settings-grid">
@@ -191,7 +190,7 @@
       <div class="dialog setup-dialog" role="dialog" aria-modal="true" aria-labelledby="setup-title">
         <header class="dialog-header">
           <div><h2 id="setup-title">Install Sunrise</h2></div>
-           <ui-close-button id="close-setup" aria-label="Close installation setup" />
+          <ui-close-button id="close-setup" aria-label="Close installation setup"></ui-close-button>
         </header>
 
         <ol class="setup-progress" aria-label="Installation setup progress">
